@@ -7,7 +7,7 @@ import Work from '@/components/pages/home/Work'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-   title: 'Home',
+   title: 'Home | John Doe',
 }
 
 async function HomePage() {
