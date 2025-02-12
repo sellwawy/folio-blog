@@ -8,7 +8,7 @@ export default function Footer() {
                {/* Footer social links */}
                <SocialMedia />
                {/* Footer copy content */}
-               <div className="text-center font-medium">&copy; 2024 Tohfa Blog. All Rights Reserved.</div>
+               <div className="text-center font-medium">&copy; 2025 Sellwawy. All Rights Reserved.</div>
             </div>
          </footer>
       </>
