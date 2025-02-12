@@ -1,0 +1,113 @@
+@import 'tailwindcss';
+
+@theme {
+   --breakpoint-*: initial;
+   --breakpoint-sm: 36em;
+   --breakpoint-md: 48em;
+   --breakpoint-lg: 62em;
+   --breakpoint-xl: 75em;
+   --breakpoint-2xl: 87.5em;
+
+   --text-*: initial;
+   --text-xs: var(--fluid-12-14);
+   --text-sm: var(--fluid-14-15);
+   --text-base: var(--fluid-14-16);
+   --text-lg: var(--fluid-15-17);
+   --text-xl: var(--fluid-16-18);
+   --text-2xl: var(--fluid-17-20);
+   --text-3xl: var(--fluid-19-25);
+   --text-4xl: var(--fluid-20-30);
+   --text-5xl: var(--fluid-25-40);
+
+   --color-primary: #020617;
+   --color-secondary: #1e293b;
+   --color-tertiary: #334155;
+   --color-quaternary: hsl(216 20 95);
+   --color-quinary: #fff;
+
+   --shadow-custom: 0px 1px 4px hsl(0 0 0 / 0.2);
+
+   --spacing-spacing-1: var(--fluid-2-4);
+   --spacing-spacing-2: var(--fluid-5-7);
+   --spacing-spacing-3: var(--fluid-7-10);
+   --spacing-spacing-4: var(--fluid-10-12);
+   --spacing-spacing-5: var(--fluid-13-16);
+   --spacing-spacing-6: var(--fluid-8-17);
+   --spacing-spacing-7: var(--fluid-12-19);
+   --spacing-spacing-8: var(--fluid-14-23);
+   --spacing-spacing-9: var(--fluid-13-25);
+   --spacing-spacing-10: var(--fluid-20-32);
+   --spacing-spacing-11: var(--fluid-28-42);
+   --spacing-spacing-12: var(--fluid-68-78);
+   --spacing-spacing-13: var(--fluid-130-150);
+
+   @keyframes loading {
+      0% {
+         color: #000000;
+      }
+      50% {
+         color: #cccccc;
+      }
+      100% {
+         color: #000000;
+      }
+   }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+   *,
+   ::after,
+   ::before,
+   ::backdrop,
+   ::file-selector-button {
+      border-color: var(--color-gray-200, currentColor);
+   }
+}
+
+@utility wrapper {
+   /* md:max-lg:container */
+   @apply mx-auto w-full max-w-(--breakpoint-xl) px-4 md:px-8;
+}
+
+@layer utilities {
+   :root {
+      /* fluid font size and Spacing 
+   https://utopia.fyi/clamp/calculator/?a=320,1200 */
+
+      /* Font size */
+      --fluid-12-14: clamp(0.75rem, 0.7045rem + 0.2273vi, 0.875rem);
+      --fluid-14-15: clamp(0.875rem, 0.8523rem + 0.1136vi, 0.9375rem);
+      --fluid-14-16: clamp(0.875rem, 0.8295rem + 0.2273vi, 1rem);
+      --fluid-16-18: clamp(1rem, 0.9545rem + 0.2273vi, 1.125rem);
+      --fluid-15-17: clamp(0.9375rem, 0.892rem + 0.2273vi, 1.0625rem);
+      --fluid-17-20: clamp(1.0625rem, 0.9943rem + 0.3409vi, 1.25rem);
+      --fluid-19-25: clamp(1.1875rem, 1.0511rem + 0.6818vi, 1.5625rem);
+      --fluid-20-30: clamp(1.25rem, 1.0227rem + 1.1364vi, 1.875rem);
+      --fluid-25-40: clamp(1.5625rem, 1.2216rem + 1.7045vi, 2.5rem);
+
+      /* Spacing */
+      --fluid-2-4: clamp(0.125rem, 0.0795rem + 0.2273vi, 0.25rem);
+      --fluid-5-7: clamp(0.3125rem, 0.267rem + 0.2273vi, 0.4375rem);
+      --fluid-7-10: clamp(0.4375rem, 0.3693rem + 0.3409vi, 0.625rem);
+      --fluid-10-12: clamp(0.625rem, 0.5795rem + 0.2273vi, 0.75rem);
+      --fluid-13-16: clamp(0.8125rem, 0.7443rem + 0.3409vi, 1rem);
+      --fluid-8-17: clamp(0.5rem, 0.3043rem + 0.9783vi, 1.0625rem);
+      --fluid-12-19: clamp(0.75rem, 0.5978rem + 0.7609vi, 1.1875rem);
+      --fluid-14-23: clamp(0.875rem, 0.6793rem + 0.9783vi, 1.4375rem);
+      --fluid-13-25: clamp(0.8125rem, 0.5398rem + 1.3636vi, 1.5625rem);
+      --fluid-20-32: clamp(1.25rem, 0.9773rem + 1.3636vi, 2rem);
+      --fluid-28-42: clamp(1.75rem, 1.4318rem + 1.5909vi, 2.625rem);
+      --fluid-68-78: clamp(4.25rem, 4.0648rem + 0.9259vw, 4.875rem);
+      --fluid-130-150: clamp(8.125rem, 7.6705rem + 2.2727vi, 9.375rem);
+   }
+}
+
+@plugin "@tailwindcss/typography";
