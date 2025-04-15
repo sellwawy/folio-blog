@@ -6,7 +6,7 @@ import { buttonVariants } from '../../ui/Button'
 function Hero() {
    return (
       // 3.75rem (Header height)
-      <section className="wrapper bg-quinary flex min-h-[calc(100dvh-3.75rem)] flex-col items-center justify-center py-spacing-11">
+      <section className="wrapper bg-quinary flex min-h-[calc(100dvh-3.75rem)] items-center justify-center py-spacing-11">
          {/* Image */}
          <div className="flex flex-col items-center justify-center text-center">
             <Image

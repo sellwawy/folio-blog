@@ -11,6 +11,7 @@ export const PROJECTS_DATA = [
       title: 'Lorem ipsum dgolor sit amet voluptatibus',
       description:
          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eum iste quidem consequatur qui numquam.',
+      category: 'Next.js',
       previewIcons: [<FaGlobe className="" />, <FaBehance />],
    },
    {
@@ -18,12 +19,35 @@ export const PROJECTS_DATA = [
       title: 'Lorem ipsum dgolor sit amet',
       description:
          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione libero aspernatur corrupti. Cumque nihil facilis dolores natus.',
+      category: 'Next.js',
       previewIcons: [<FaGlobe />, <FaGithub />],
    },
    {
       imageSrc: project_3,
       title: 'Lorem ipsum dgolor sit amet elit',
       description: 'Lorem ipsum dgolor sit amet Lorem ipsum dgolor sit amet consequatur qui numquam.',
+      category: 'Next.js',
+      previewIcons: [<FaGlobe />, <FaGithub />],
+   },
+   {
+      imageSrc: project_3,
+      title: 'Lorem ipsum dgolor sit amet elit',
+      description: 'Lorem ipsum dgolor sit amet Lorem ipsum dgolor sit amet consequatur qui numquam.',
+      category: 'UX/UI',
+      previewIcons: [<FaGlobe />, <FaGithub />],
+   },
+   {
+      imageSrc: project_3,
+      title: 'Lorem ipsum dgolor sit amet elit',
+      description: 'Lorem ipsum dgolor sit amet Lorem ipsum dgolor sit amet consequatur qui numquam.',
+      category: 'UX/UI',
+      previewIcons: [<FaGlobe />, <FaGithub />],
+   },
+   {
+      imageSrc: project_3,
+      title: 'Lorem ipsum dgolor sit amet elit',
+      description: 'Lorem ipsum dgolor sit amet Lorem ipsum dgolor sit amet consequatur qui numquam.',
+      category: 'React.js',
       previewIcons: [<FaGlobe />, <FaGithub />],
    },
 ]

@@ -62,7 +62,9 @@ async function page(props: { params: Params }) {
       <main>
          <section className="py-spacing-12 bg-quaternary">
             <div className="wrapper">
-               <SectionHeading>{tagId}</SectionHeading>
+               <h1 className="ext-primary pb-spacing-11 text-center text-3xl font-semibold uppercase tracking-widest">
+                  {tagId}
+               </h1>
                <div className="flex flex-col sm:grid grid-cols-[repeat(auto-fill,minmax(23rem,1fr))] gap-spacing-10">
                   <Posts posts={postsMeta.slice(start, end)} />
                </div>

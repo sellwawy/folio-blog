@@ -11,7 +11,11 @@ function PostCard({ slug, title, date, description, className }: Meta) {
                <Link href={`/blog/${slug}`}>{title}</Link>
             </h3>
          </header>
-         <time dateTime={date}>{getFormattedDate(date)}</time>
+         <time
+            className="bg-quaternary w-fit rounded-lg shadow-custom mb-spacing-3 p-spacing-2"
+            dateTime={date}>
+            {getFormattedDate(date)}
+         </time>
          <p>{description}</p>
       </article>
    )
