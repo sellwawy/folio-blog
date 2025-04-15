@@ -1,6 +1,5 @@
 import PaginationControls from '@/components/pages/blog/PaginationControls'
 import Posts from '@/components/pages/blog/Posts'
-import SectionHeading from '@/components/ui/SectionHeading'
 import { getPostsMeta } from '@/lib/mdx'
 import { notFound } from 'next/navigation'
 
